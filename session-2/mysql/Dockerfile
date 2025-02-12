@@ -1,5 +1,5 @@
 # Dockerfile for MySQL with locale configuration
-# Author: [Jesús Ariel González Bonilla]
+# Author: [Oscar_Areiza]
 # Date: [21-06-2024]
 
 FROM mysql:latest
