@@ -8,7 +8,19 @@ entity Persona {
     apellido VARCHAR(50)
     documento VARCHAR(10) UNIQUE
     telefono VARCHAR(10)
-    rol ENUM('Cliente', 'Empleado', 'Administrador')
+}
+
+entity Rol {
+    primary_key(id) INT
+    nombre VARCHAR(50)
+}
+
+entity Usuario {
+    primary_key(id) INT
+    username VARCHAR(50)
+    password VARCHAR(255)
+    foreign_key(idPersona) INT
+    foreign_key(idRol) INT
 }
 
 entity Empresa {
@@ -17,11 +29,24 @@ entity Empresa {
     ubicacion VARCHAR(255)
 }
 
+entity Ubicacion {
+    primary_key(id) INT
+    direccion VARCHAR(255)
+    ciudad VARCHAR(50)
+    pais VARCHAR(50)
+}
+
 entity Reserva {
     primary_key(id) INT
     foreign_key(idCliente) INT
     foreign_key(idServicio) INT
+    foreign_key(idEstadoReserva) INT
     fecha TIMESTAMP
+}
+
+entity EstadoReserva {
+    primary_key(id) INT
+    nombre VARCHAR(50)
 }
 
 entity Servicio {
@@ -29,6 +54,12 @@ entity Servicio {
     nombre VARCHAR(50)
     descripcion TEXT
     foreign_key(idTarifa) INT
+    foreign_key(idCategoriaServicio) INT
+}
+
+entity CategoriaServicio {
+    primary_key(id) INT
+    nombre VARCHAR(50)
 }
 
 entity Tarifa {
@@ -66,11 +97,17 @@ entity Pago {
 }
 
 ' Relaciones entre entidades
-Persona ||--o{ Reserva : "realiza"
+Persona ||--o{ Usuario : "es"
+Rol ||--o{ Usuario : "tiene"
+Usuario ||--o{ Reserva : "realiza"
 Reserva }o--|| Servicio : "incluye"
+Reserva ||--|| EstadoReserva : "tiene"
 Servicio }o--|| Tarifa : "usa"
-Persona ||--o{ Horario : "asigna"
-Persona ||--o{ Factura : "recibe"
+Servicio ||--|| CategoriaServicio : "clasifica"
+Usuario ||--o{ Horario : "asigna"
+Usuario ||--o{ Factura : "recibe"
 Factura }o--|| DetalleFactura : "contiene"
 DetalleFactura }o--|| Servicio : "incluye"
 DetalleFactura }o--|| Pago : "registra"
+Empresa ||--o{ Ubicacion : "tiene"
+@enduml
