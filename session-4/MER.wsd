@@ -1,0 +1,76 @@
+@startuml
+!define primary_key(x) <b>x</b>
+!define foreign_key(x) <i>x</i>
+
+entity Persona {
+    primary_key(id) INT
+    nombre VARCHAR(50)
+    apellido VARCHAR(50)
+    documento VARCHAR(10) UNIQUE
+    telefono VARCHAR(10)
+    rol ENUM('Cliente', 'Empleado', 'Administrador')
+}
+
+entity Empresa {
+    primary_key(id) INT
+    nombre VARCHAR(100)
+    ubicacion VARCHAR(255)
+}
+
+entity Reserva {
+    primary_key(id) INT
+    foreign_key(idCliente) INT
+    foreign_key(idServicio) INT
+    fecha TIMESTAMP
+}
+
+entity Servicio {
+    primary_key(id) INT
+    nombre VARCHAR(50)
+    descripcion TEXT
+    foreign_key(idTarifa) INT
+}
+
+entity Tarifa {
+    primary_key(id) INT
+    precio DECIMAL(10,2)
+    duracionMinutos INT
+}
+
+entity Horario {
+    primary_key(id) INT
+    foreign_key(idEmpleado) INT
+    diaSemana VARCHAR(10)
+    horaInicio TIME
+    horaFin TIME
+}
+
+entity Factura {
+    primary_key(id) INT
+    foreign_key(idCliente) INT
+    fecha TIMESTAMP
+}
+
+entity DetalleFactura {
+    primary_key(id) INT
+    foreign_key(idFactura) INT
+    foreign_key(idServicio) INT
+    foreign_key(idPago) INT
+}
+
+entity Pago {
+    primary_key(id) INT
+    tipoPago VARCHAR(20)
+    monto DECIMAL(10,2)
+    fechaPago TIMESTAMP
+}
+
+' Relaciones entre entidades
+Persona ||--o{ Reserva : "realiza"
+Reserva }o--|| Servicio : "incluye"
+Servicio }o--|| Tarifa : "usa"
+Persona ||--o{ Horario : "asigna"
+Persona ||--o{ Factura : "recibe"
+Factura }o--|| DetalleFactura : "contiene"
+DetalleFactura }o--|| Servicio : "incluye"
+DetalleFactura }o--|| Pago : "registra"

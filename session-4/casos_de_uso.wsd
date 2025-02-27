@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+actor Cliente as cliente
+actor Empleado as empleado
+actor Administrador as administrador
+
+database "Base de Datos" as BD
+
+rectangle "Sistema de Reservas" {
+    
+    usecase "Autenticación" as autenticacion
+    usecase "Registro Cliente" as registroCliente
+    usecase "Registro Empleado" as registroEmpleado
+    usecase "Gestión de Tarifas" as gestionarTarifas
+    usecase "Gestionar Horarios" as gestionarHorarios
+    usecase "Gestionar Reserva (Crear, Cancelar)" as gestionarReserva
+    usecase "Pagar" as pagar
+
+    cliente -- autenticacion
+    cliente -- registroCliente
+    cliente -- gestionarReserva
+    cliente -- pagar
+
+    empleado -- autenticacion
+    empleado -- gestionarHorarios
+
+    administrador -- autenticacion
+    administrador -- registroEmpleado
+    administrador -- gestionarTarifas
+    administrador -- gestionarHorarios
+}
+
+BD --|> "Sistema de Reservas"
+
+@enduml
