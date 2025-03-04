@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+actor Pasajero as P
+actor Tripulación as T
+actor "Personal de Tierra" as PT
+
+rectangle "App Móvil" {
+    P --> (Verificar Estado de Vuelo)
+    P --> (Realizar Check-in)
+    P --> (Solicitar Información de Servicios)
+    T --> (Actualizar Horarios de Vuelo)
+    PT --> (Gestionar Puertas de Embarque)
+
+    (Verificar Estado de Vuelo) --> (Generar Notificaciones)
+    (Actualizar Horarios de Vuelo) --> (Generar Notificaciones)
+    (Gestionar Puertas de Embarque) --> (Generar Notificaciones)
+
+    (Generar Notificaciones) --> (Base de Información Centralizada)
+    (Realizar Check-in) --> (Base de Información Centralizada)
+    (Solicitar Información de Servicios) --> (Base de Información Centralizada)
+}
+
+@enduml
