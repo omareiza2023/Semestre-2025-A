@@ -1,6 +1,12 @@
 # Introduction to UX Design
 
-## Puntos Claves
+## Evidencia de Finalización del Curso  
+
+Este módulo ha sido completado exitosamente. A continuación, se muestra el certificado de finalización:  
+
+![Certificado de Finalización - Introduction to UX Design](/recursos-adicionales/certificacion_1.png)  
+
+## Puntos Claves sobre el Módulo  
 
 1. El diseño de UX crea diseños centrados en el usuario para productos físicos y digitales, como sitios web y aplicaciones, con el fin de mejorar la satisfacción del usuario.  
 
