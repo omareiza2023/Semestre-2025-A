@@ -70,3 +70,12 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
     - Actualizar el prototipo  
 
 18. Para **validar el prototipo actualizado**, los diseñadores iteran y refinan el diseño hasta que satisface las necesidades de los usuarios.  
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_5.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **80% de precisión** en función de los criterios evaluados, demostrando un dominio casi completo de los conocimientos adquiridos en el módulo.  
