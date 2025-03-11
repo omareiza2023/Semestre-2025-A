@@ -56,3 +56,13 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
     - **Digital**  
 
 15. Los diseñadores de UX utilizan varias herramientas para crear **prototipos de baja y alta fidelidad** en función de las necesidades y el objetivo del proyecto.  
+
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_4.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **93% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo.  
