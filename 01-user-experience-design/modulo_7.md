@@ -72,3 +72,13 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
    - Buscar retroalimentación  
    - Participar en voluntariados o pasantías  
    - Explorar nuevas oportunidades laborales  
+
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_7.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **100% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo.  
