@@ -40,3 +40,12 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 13. El análisis comparativo consiste en comparar un producto o servicio frente a una gama más amplia de ofertas afines que pueden no ser competidores directos.  
 
 14. Marcos como el análisis FODA, el mapa del recorrido del usuario, el mapa perceptual y el marco HEART ayudan a los diseñadores a realizar análisis competitivos y comparativos.  
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_2.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **80% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo.  
