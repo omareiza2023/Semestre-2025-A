@@ -93,3 +93,13 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
    - Archivos maestros frente a copias de trabajo  
    - Plan de copia de seguridad y recuperación  
    - Herramientas de colaboración  
+
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_6.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **80% de precisión** en función de los criterios evaluados, demostrando un dominio casi completo de los conocimientos adquiridos en el módulo.  
