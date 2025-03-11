@@ -32,4 +32,15 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 
 12. Los casos prácticos de diseño de UX muestran las competencias, la experiencia y los procesos de pensamiento del diseñador de UX que hay detrás del diseño.  
 
-13. Los casos prácticos son un excelente complemento para el portafolio del diseñador. Ayudan al crecimiento profesional.  
+13. Los casos prácticos son un excelente complemento para el portafolio del diseñador. Ayudan al crecimiento profesional. 
+
+# Evidencia de Conocimientos Adquiridos  
+
+## Evaluación de Conocimientos  
+
+![Evaluación de Conocimientos](/recursos-adicionales/examen_1.png)  
+
+## Resultado de la Evaluación  
+
+Se certifica que el examen ha sido aprobado con una calificación del **100% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo.  
+
