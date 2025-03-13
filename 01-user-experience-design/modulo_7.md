@@ -81,4 +81,4 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 
 ## Resultado de la Evaluación  
 
-Se certifica que el examen ha sido aprobado con una calificación del **100% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo.  
+Se certifica que el examen ha sido aprobado con una calificación del **100% de precisión** en función de los criterios evaluados, demostrando un dominio completo de los conocimientos adquiridos en el módulo 7.  
