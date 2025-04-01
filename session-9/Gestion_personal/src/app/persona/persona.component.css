@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:nth-child(1) { background: #28a745; color: white; }  /* Médico */
+  button:nth-child(2) { background: #007bff; color: white; }  /* Paciente */
+  button:nth-child(3) { background: #ffc107; color: black; }  /* Enfermero */
+  button:nth-child(4) { background: #dc3545; color: white; }  /* Recepcionista */
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

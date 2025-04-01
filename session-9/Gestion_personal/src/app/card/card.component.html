@@ -1,0 +1,9 @@
+<div class="card">
+  <ng-content></ng-content>
+  <app-botones 
+    (save)="save.emit()" 
+    (cancel)="cancel.emit()" 
+    (edit)="edit.emit()" 
+    (delete)="delete.emit()">
+  </app-botones>
+</div>
