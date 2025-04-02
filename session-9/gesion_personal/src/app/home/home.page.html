@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gestión de Personal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Bienvenido a la Gestión de Personal</h2>
+  <p>Seleccione el tipo de rol que desea consultar:</p>
+
+  <ion-item>
+    <ion-label>Rol</ion-label>
+    <ion-select [(ngModel)]="rolSeleccionado">
+      <ion-select-option value="enfermero">Enfermero</ion-select-option>
+      <ion-select-option value="medico">Médico</ion-select-option>
+      <ion-select-option value="recepcionista">Recepcionista</ion-select-option>
+      <ion-select-option value="paciente">Paciente</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <app-botones 
+    (consultar)="onConsultar()">
+  </app-botones>
+</ion-content>
