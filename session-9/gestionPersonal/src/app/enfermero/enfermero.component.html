@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>Datos del Enfermero</h2>
+
+  <p><strong>Nombre:</strong> {{ enfermero.nombre }}</p>
+  <p><strong>Apellido:</strong> {{ enfermero.apellido }}</p>
+  <p><strong>Edad:</strong> {{ enfermero.edad }}</p>
+  <p><strong>Correo Electrónico:</strong> {{ enfermero.correo }}</p>
+  <p><strong>Turno Asignado:</strong> {{ enfermero.turno }}</p>
+  <p><strong>Área de Atención:</strong> {{ enfermero.area }}</p>
+
+  <div class="button-group">
+    <button (click)="agregar()">Agregar</button>
+    <button (click)="modificar()">Modificar</button>
+    <button (click)="eliminar()">Eliminar</button>
+    <button (click)="consultar()">Consultar</button>
+  </div>
+</div>

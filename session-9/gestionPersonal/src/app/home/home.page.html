@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Bienvenido a la Gestión de Personal</h2>
+
+  <label for="role-select">Seleccione un rol:</label>
+  <select id="role-select" [(ngModel)]="rolSeleccionado">
+    <option value="medico">Médico</option>
+    <option value="enfermero">Enfermero</option>
+    <option value="recepcionista">Recepcionista</option>
+    <option value="paciente">Paciente</option>
+  </select>
+
+  <button (click)="verRol()">Ver</button>
+</div>

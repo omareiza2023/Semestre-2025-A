@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>Datos de la Recepcionista</h2>
+
+  <p><strong>Nombre:</strong> {{ recepcionista.nombre }}</p>
+  <p><strong>Apellido:</strong> {{ recepcionista.apellido }}</p>
+  <p><strong>Edad:</strong> {{ recepcionista.edad }}</p>
+  <p><strong>Correo Electrónico:</strong> {{ recepcionista.correo }}</p>
+  <p><strong>Horario Laboral:</strong> {{ recepcionista.horario }}</p>
+  <p><strong>Extensión Telefónica:</strong> {{ recepcionista.extension }}</p>
+
+  <div class="button-group">
+    <button (click)="agregar()">Agregar</button>
+    <button (click)="modificar()">Modificar</button>
+    <button (click)="eliminar()">Eliminar</button>
+    <button (click)="consultar()">Consultar</button>
+  </div>
+</div>
