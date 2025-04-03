@@ -6,7 +6,7 @@ Este módulo profundiza en el uso de JavaScript para crear sitios web dinámicos
 
 Este módulo ha sido completado exitosamente. A continuación, se muestra el certificado de finalización:  
 
-![Certificado de Finalización - Creación de sitios web dinámicos con JavaScript](02-fundamentals-of-web-development/recursos_adicionales/certificado_4.png)  
+![Certificado de Finalización - Creación de sitios web dinámicos con JavaScript](/02-fundamentals-of-web-development/recursos_adicionales/certificado_4.png)  
 
 ## Puntos Claves sobre el Módulo  
 
@@ -42,8 +42,8 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 
 ## Evaluación de Conocimientos  
 
-![Evaluación de Conocimientos](/recursos-adicionales/examen_4.png)  
+![Evaluación de Conocimientos](/02-fundamentals-of-web-development/recursos_adicionales/examen4.png)  
 
 ## Resultado de la Evaluación  
 
-Se certifica que el examen ha sido aprobado con una calificación del **85% de precisión**, demostrando un dominio completo de los conocimientos adquiridos en el módulo.
+Se certifica que el examen ha sido aprobado con una calificación del **80% de precisión**, demostrando un dominio completo de los conocimientos adquiridos en el módulo.
