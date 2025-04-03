@@ -18,7 +18,7 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 
 4. Un elemento HTML que contiene otro es el padre de ese elemento. Los elementos HTML dentro del padre son los elementos hijo.  
 
-5. Los documentos HTML deben incluir los elementos `<html> </html>`, `<head></head>` y `<body></body>`.  
+5. Los documentos HTML deben incluir los elementos `<html> </html>`, `<head></head>`  y `<body></body>`.  
 
 6. Los atributos pueden cambiar el estilo del elemento, establecer una propiedad e incluir metadatos para que los utilice un programa de script.  
 
