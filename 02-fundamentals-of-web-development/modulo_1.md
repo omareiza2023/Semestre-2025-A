@@ -6,7 +6,7 @@ Este módulo proporciona una visión general sobre los fundamentos del desarroll
 
 Este módulo ha sido completado exitosamente. A continuación, se muestra el certificado de finalización:  
 
-![Certificado de Finalización - Aspectos básicos del desarrollo web](/recursos-adicionales/certificacion_2.png)  
+![Certificado de Finalización - Aspectos básicos del desarrollo web](/02-fundamentals-of-web-development/recursos_adicionales/certificado_1.png)  
 
 ## Puntos Claves sobre el Módulo  
 
@@ -40,8 +40,8 @@ Este módulo ha sido completado exitosamente. A continuación, se muestra el cer
 
 ## Evaluación de Conocimientos  
 
-![Evaluación de Conocimientos](/recursos-adicionales/examen_2.png)  
+![Evaluación de Conocimientos](/02-fundamentals-of-web-development/recursos_adicionales/examen1.png/)  
 
 ## Resultado de la Evaluación  
 
-Se certifica que el examen ha sido aprobado con una calificación del **85% de precisión**, demostrando un dominio completo de los conocimientos adquiridos en el módulo.
+Se certifica que el examen ha sido aprobado con una calificación del **80% de precisión**, demostrando un dominio completo de los conocimientos adquiridos en el módulo.
