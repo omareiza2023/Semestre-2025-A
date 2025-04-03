@@ -6,7 +6,7 @@ Este módulo ofrece una visión introductoria sobre los conceptos fundamentales 
 
 Este módulo ha sido completado exitosamente. A continuación, se muestra el certificado de finalización:  
 
-![Certificado de Finalización - Introducción a HTML y CSS](02-fundamentals-of-web-development/recursos_adicionales/certificado_3.png)  
+![Certificado de Finalización - Introducción a HTML y CSS](/02-fundamentals-of-web-development/recursos_adicionales/certificado_3.png)  
 
 ## Puntos Claves sobre el Módulo  
 
