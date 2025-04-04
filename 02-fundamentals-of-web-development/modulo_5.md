@@ -6,7 +6,7 @@ Este módulo aborda las técnicas y herramientas necesarias para probar y desple
 
 Este módulo ha sido completado exitosamente. A continuación, se muestra el certificado de finalización:  
 
-![Certificado de Finalización - Prueba y Despliegue de Sitios Web](02-fundamentals-of-web-development/recursos_adicionales/certificado_5.png)  
+![Certificado de Finalización - Prueba y Despliegue de Sitios Web](/02-fundamentals-of-web-development/recursos_adicionales/certificado_5.png)  
 
 ## Puntos Claves sobre el Módulo  
 
