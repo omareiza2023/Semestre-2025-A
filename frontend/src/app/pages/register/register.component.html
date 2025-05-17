@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png" alt="Golden Barbershop" />
+    <h1>GOLDEN BARBERSHOP</h1>
+    <p class="slogan">since 1999</p>
+  </div>
+
+  <h2 class="title">Crear cuenta</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-icon slot="start" [icon]="icons.personOutline"></ion-icon>
+      <ion-input placeholder="Nombre Completo" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-input placeholder="Email" formControlName="email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-input placeholder="Password" formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-input placeholder="Confirme su Password" formControlName="confirmPassword" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="warning" type="submit" class="ion-margin-top">
+      Registrar
+    </ion-button>
+  </form>
+
+  <div class="footer">
+    <p>Already Have an account? <a routerLink="/login">Sign In</a></p>
+  </div>
+</ion-content>

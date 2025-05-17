@@ -1,0 +1,8 @@
+<ion-list>
+  <ion-radio-group [(ngModel)]="elegido" (ionChange)="select.emit(elegido)">
+    <ion-item *ngFor="let m of metodos">
+      <ion-label>{{ m | titlecase }}</ion-label>
+      <ion-radio slot="start" [value]="m"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
