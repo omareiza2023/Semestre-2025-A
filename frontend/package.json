@@ -24,7 +24,10 @@
     "@ionic/angular": "^8.5.5",
     "@ionic/pwa-elements": "^3.3.0",
     "rxjs": "~7.8.0",
+<<<<<<< HEAD
     "sweetalert2": "^11.21.1",
+=======
+>>>>>>> 059de6d (chore: commit inicial)
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
