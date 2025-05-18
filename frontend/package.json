@@ -25,6 +25,7 @@
     "@ionic/pwa-elements": "^3.3.0",
     "rxjs": "~7.8.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "sweetalert2": "^11.21.1",
 =======
 <<<<<<< HEAD
@@ -32,6 +33,11 @@
     "sweetalert2": "^11.21.1",
 >>>>>>> feature/HU-04
 >>>>>>> a062d90c030714481bc4927d8cba1602a98b14ae
+=======
+=======
+    "sweetalert2": "^11.21.1",
+>>>>>>> feature/HU-04
+>>>>>>> 8e31dd262735ffd8c31536bc6ca49848d71a4110
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
