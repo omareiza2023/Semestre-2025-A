@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './pages/register/register.component';
+import { AgendarCitaComponent } from './pages/agendar-cita/agendar-cita.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
-  // Puedes agregar el login luego
+  { path: 'agendar', component: AgendarCitaComponent }
 ];
