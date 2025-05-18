@@ -1,0 +1,17 @@
+<ion-item>
+    <ion-label position="stacked">Cliente</ion-label>
+    <ion-input [(ngModel)]="data.cliente" (ngModelChange)="change.emit(data)" placeholder="Nombre del cliente">
+    </ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label position="stacked">NIT / DNI</ion-label>
+    <ion-input [(ngModel)]="data.nit" (ngModelChange)="change.emit(data)" placeholder="Número de identificación">
+    </ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label position="stacked">Fecha</ion-label>
+    <ion-input type="date" [(ngModel)]="data.fecha" (ngModelChange)="change.emit(data)">
+    </ion-input>
+</ion-item>

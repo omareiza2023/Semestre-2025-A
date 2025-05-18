@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+    <ion-title>Página principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- 1) Productos -->
+  <h2>Productoss</h2>
+  <app-productos (add)="carrito.push($event)"></app-productos>
+
+  <!-- 2) Encabezado de factura -->
+  <h2 class="ion-margin-top">Datos de factura</h2>
+  <app-factura-encabezado (change)="encabezado = $event"></app-factura-encabezado>
+
+  <!-- 3) Método de pago -->
+  <h2 class="ion-margin-top">Método de pago</h2>
+  <app-pago-metodo (select)="pago = $event"></app-pago-metodo>
+
+  <!-- Resumen -->
+  <h2 class="ion-margin-top">Resumen</h2>
+  <ion-list *ngIf="carrito.length">
+    <ion-item *ngFor="let p of carrito">{{ p.nombre }} — ${{ p.precio }}</ion-item>
+    <ion-item lines="full"><strong>Total: $ {{ total }}</strong></ion-item>
+    <ion-item>
+      Cliente: {{ encabezado?.cliente || '—' }} |
+      Pago: {{ pago || '—' }}
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" class="ion-margin-top"
+              [disabled]="!carrito.length || !encabezado || !pago"
+              (click)="confirmarCompra()">
+    Confirmar compra
+  </ion-button>
+
+</ion-content>

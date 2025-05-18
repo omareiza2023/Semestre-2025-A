@@ -1,0 +1,39 @@
+.logo {
+  text-align: center;
+  margin-top: 40px;
+
+  img {
+    height: 60px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4a017;
+  }
+
+  .slogan {
+    font-style: italic;
+    color: #d4a017;
+    margin-top: -5px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+
+  a {
+    color: #d4a017;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
