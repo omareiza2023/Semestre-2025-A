@@ -1,0 +1,46 @@
+<ion-content class="container">
+  <div class="profile-header">
+    <img src="assets/perfil-cliente.png" alt="Perfil" class="profile-img">
+    <h3>Welcome back,</h3>
+    <h2>cliente T-800</h2>
+  </div>
+
+  <div class="grid-buttons">
+    <button class="card-button" (click)="navigateToWhatsApp()">
+      <div class="card-content">
+        <ion-icon name="chatbox-ellipses-outline" class="icon"></ion-icon>
+        <span>Contactarnos</span>
+      </div>
+    </button>
+
+    <button class="card-button" routerLink="/reservas">
+      <div class="card-content">
+        <ion-icon name="calendar-outline" class="icon"></ion-icon>
+        <span>Reservas</span>
+      </div>
+    </button>
+
+    <button class="card-button" routerLink="/informacion">
+      <div class="card-content">
+        <ion-icon name="person-outline" class="icon"></ion-icon>
+        <span>Editar información</span>
+      </div>
+    </button>
+
+    <button class="card-button" (click)="navigateToGoogleMaps()">
+      <div class="card-content">
+        <ion-icon name="location-outline" class="icon"></ion-icon>
+        <span>Ubicación de la barbería</span>
+      </div>
+    </button>
+
+    <button class="card-button" (click)="confirmDeleteAccount()">
+      <div class="card-content">
+        <ion-icon name="trash-outline" class="icon"></ion-icon>
+        <span>Eliminar cuenta</span>
+      </div>
+    </button>
+  </div>
+
+  <button class="logout-button" (click)="confirmLogout()">Cerrar sesión</button>
+</ion-content>
