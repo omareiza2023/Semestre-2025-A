@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Actualizar Tarifa</h2>
+  </div>
+
+  <img src="assets/logo-goldenbarbershop.png" alt="Golden Barbershop" class="logo" />
+
+  <form>
+    <label for="servicio">Servicio</label>
+    <select id="servicio" [(ngModel)]="servicioSeleccionado" name="servicio">
+      <option [ngValue]="null" disabled selected>Seleccione un servicio</option>
+      <option *ngFor="let servicio of servicios" [ngValue]="servicio.id">
+        {{ servicio.nombre }}
+      </option>
+    </select>
+
+    <label for="tarifa">Nueva tarifa</label>
+    <input
+      id="tarifa"
+      type="number"
+      [(ngModel)]="nuevaTarifa"
+      name="tarifa"
+      placeholder="Ej: 42000"
+    />
+
+    <button type="button" class="actualizar-btn" (click)="actualizarTarifa()">+</button>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Nuevo Servicio</h2>
+  </div>
+
+  <img src="assets/logo-goldenbarbershop.png" alt="Golden Barbershop" class="logo" />
+
+  <form>
+    <label for="servicio">Nuevo Servicio</label>
+    <input
+      id="servicio"
+      type="text"
+      [(ngModel)]="nombreServicio"
+      name="servicio"
+      placeholder="Ej: Corte, Barba"
+    />
+
+    <label for="tarifa">Tarifa</label>
+    <input
+      id="tarifa"
+      type="number"
+      [(ngModel)]="tarifa"
+      name="tarifa"
+      placeholder="Ej: 18000"
+    />
+
+    <button type="button" class="crear-btn" (click)="crearServicio()">Crear</button>
+  </form>
+</div>
+s
