@@ -1,0 +1,37 @@
+<ion-content class="login-container">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png" alt="Golden Barbershop">
+  </div>
+
+  <ion-item>
+    <ion-input 
+      placeholder="e-mail" 
+      [(ngModel)]="email" 
+      name="email">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input 
+      type="password" 
+      placeholder="contraseña" 
+      [(ngModel)]="password" 
+      name="password">
+    </ion-input>
+  </ion-item>
+
+  <ion-button 
+    expand="block" 
+    color="primary" 
+    (click)="iniciarSesion()">
+    Iniciar sesión
+  </ion-button>
+
+  <ion-button 
+    expand="block" 
+    color="secondary" 
+    (click)="registrar()">
+    Registrar
+  </ion-button>
+</ion-content>
+

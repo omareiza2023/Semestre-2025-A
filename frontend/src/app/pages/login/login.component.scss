@@ -1,0 +1,44 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      color: #f2b705;
+      margin: 0;
+    }
+
+    p {
+      color: #a5a5a5;
+      font-size: 14px;
+    }
+  }
+
+  ion-item {
+    --background: #e3f2fd;
+    --border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  ion-button {
+    margin-top: 10px;
+    --border-radius: 8px;
+    &.ion-color-primary {
+      --background: #64b5f6;
+    }
+    &.ion-color-secondary {
+      --background: #81d4fa;
+    }
+  }
+}
