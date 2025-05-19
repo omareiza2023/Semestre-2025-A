@@ -6,6 +6,7 @@ import { personOutline, mailOutline, lockClosedOutline } from 'ionicons/icons';
 import { IONIC_STANDALONE_COMPONENTS } from '../../shared/ionic-standalone';
 import { AuthService } from '../../services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 @Component({
     standalone: true,
@@ -48,7 +49,7 @@ export class RegisterComponent {
 
     submit() {
         if (this.form.invalid || this.form.value.password !== this.form.value.confirmPassword) {
-            console.log('Formulario inválido o contraseñas no coinciden');
+            alert("Datos inválidos: Revisa que todos los campos estén completos y las contraseñas coincidan");
             return;
         }
 
@@ -65,10 +66,12 @@ export class RegisterComponent {
 
         this.authService.registrarCliente(data).subscribe({
             next: (res) => {
-                console.log('Usuario registrado:', res);
-                this.router.navigate(['/login']); // redirige al login si existe esa vista
+                alert("Registro exitoso: Tu cuenta ha sido creada correctamente.");
+                this.form.reset(); // Limpia el formulario
+                this.router.navigate(['/login']);
             },
             error: (err) => {
+                alert("Error: Hubo un problema al registrar el usuario.")
                 console.error('Error en el registro:', err);
             }
         });
