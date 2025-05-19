@@ -9,7 +9,7 @@ import { Usuario } from './user';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './info-user.component.html',
-  styleUrls: ['./info-user.component.css']
+  styleUrls: ['./info-user.component.scss']
 })
 export class InfoUserComponent {
   usuario: Usuario = new Usuario();

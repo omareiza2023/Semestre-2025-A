@@ -9,7 +9,7 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [CommonModule, FormsModule, IonicModule],
   templateUrl: './informacion-empresa.component.html',
-  styleUrls: ['./informacion-empresa.component.css']
+  styleUrls: ['./informacion-empresa.component.scss']
 })
 export class InformacionEmpresaComponent {
   horarios: string = '';
