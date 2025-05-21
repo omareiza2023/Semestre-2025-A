@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 
@@ -19,19 +18,7 @@ export class ViewAdminComponent {
   }
 
   cerrarSesion() {
-    Swal.fire({
-      title: '¿Seguro que quieres cerrar sesión?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Sí, cerrar sesión',
-      cancelButtonText: 'No, permanecer',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.router.navigate(['/login']);
-      }
-    });
+    this.router.navigate(['/login']);
   }
 }
 

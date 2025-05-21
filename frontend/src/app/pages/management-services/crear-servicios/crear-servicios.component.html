@@ -4,28 +4,27 @@
     <h2>Nuevo Servicio</h2>
   </div>
 
-  <img src="assets/logo-goldenbarbershop.png" alt="Golden Barbershop" class="logo" />
+  <img src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png" alt="Golden Barbershop" class="logo" />
 
   <form>
-    <label for="servicio">Nuevo Servicio</label>
-    <input
-      id="servicio"
-      type="text"
-      [(ngModel)]="nombreServicio"
-      name="servicio"
-      placeholder="Ej: Corte, Barba"
-    />
+    <label for="servicio">Nombre del Servicio</label>
+    <input id="servicio" type="text" [(ngModel)]="nombreServicio" name="servicio" placeholder="Ej: Corte Clásico" />
 
-    <label for="tarifa">Tarifa</label>
-    <input
-      id="tarifa"
-      type="number"
-      [(ngModel)]="tarifa"
-      name="tarifa"
-      placeholder="Ej: 18000"
-    />
+    <label for="descripcion">Descripción</label>
+    <input id="descripcion" type="text" [(ngModel)]="descripcion" name="descripcion" placeholder="Ej: incluye lavado" />
 
-    <button type="button" class="crear-btn" (click)="crearServicio()">Crear</button>
+    <label for="categoria">Categoría</label>
+    <ion-select id="categoria" [(ngModel)]="idCategoriaServicio" name="categoria">
+      <ion-select-option disabled value="">Seleccione una categoría</ion-select-option>
+      <ion-select-option *ngFor="let cat of categorias" [value]="cat.id">
+        {{ cat.nombre }} - ${{ cat.precio }}
+      </ion-select-option>
+    </ion-select>
+    <button type="button" class="crear-btn" [disabled]="!nombreServicio || !descripcion || !idCategoriaServicio"
+      (click)="crearServicio()">
+      Crear
+    </button>
   </form>
+
 </div>
 s

@@ -9,14 +9,15 @@
       <div class="info">
         <div>
           <h3>{{ s.nombre }}</h3>
-          <p>{{ s.duracion }}</p>
+          <p>{{ s.descripcion }}</p>
         </div>
-        <div class="icono">{{ s.icono }}</div>
+        <div class="icono">💈</div>
       </div>
       <div class="precio">
-        ${{ s.precio | number: '1.0-0' }} COP
+        ${{ s.categoriaServicio?.precio | number: '1.0-0' }} COP
       </div>
     </div>
+
   </div>
 
   <button class="nuevo-btn" (click)="crearNuevoServicio()">nuevo servicio</button>
