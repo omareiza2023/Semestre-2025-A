@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Mis Reservas</h2>
+  </div>
+
+  <div class="lista">
+    <div class="reserva" *ngFor="let r of reservas">
+      <div class="info">
+        <h3>{{ r.servicio.nombre }}</h3>
+        <p>{{ r.servicio.descripcion }}</p>
+        <p><strong>Fecha:</strong> {{ r.fecha | date: 'medium' }}</p>
+        <p><strong>Precio:</strong> ${{ r.servicio.categoriaServicio?.precio }} COP</p>
+        <p><strong>Estado:</strong> {{ r.estado }}</p>
+      </div>
+    </div>
+  </div>
+</div>
