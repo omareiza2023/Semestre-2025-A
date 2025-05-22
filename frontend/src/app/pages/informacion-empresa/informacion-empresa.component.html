@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Información empresa</h2>
+  </div>
+
+  <img src="assets/logo-goldenbarbershop.png" alt="Golden Barbershop" class="logo" />
+
+  <form>
+    <label for="horarios">Horarios</label>
+    <input id="horarios" type="text" [(ngModel)]="horarios" name="horarios" />
+
+    <label for="ubicacion">Ubicación</label>
+    <input id="ubicacion" type="text" [(ngModel)]="ubicacion" name="ubicacion" />
+
+    <label for="ciudad">Ciudad/Departamento</label>
+    <input id="ciudad" type="text" [(ngModel)]="ciudad" name="ciudad" />
+
+    <button type="button" class="guardar-btn" (click)="guardarInformacion()">Guardar</button>
+  </form>
+</div>

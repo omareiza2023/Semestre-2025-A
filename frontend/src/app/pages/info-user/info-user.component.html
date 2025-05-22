@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Editar perfil</h2>
+  </div>
+
+  <form>
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" [(ngModel)]="usuario.persona.nombre" name="nombre" />
+
+    <label for="apellido">Apellido</label>
+    <input id="apellido" type="text" [(ngModel)]="usuario.persona.apellido" name="apellido" />
+
+    <label for="documento">Documento</label>
+    <input id="documento" type="text" [(ngModel)]="usuario.persona.documento" name="documento" />
+
+    <label for="telefono">Teléfono</label>
+    <input id="telefono" type="text" [(ngModel)]="usuario.persona.telefono" name="telefono" />
+
+    <label for="username">Usuario</label>
+    <input id="username" type="text" [(ngModel)]="usuario.username" name="username" />
+
+    <label for="password">Contraseña</label>
+    <input id="password" type="password" [(ngModel)]="usuario.password" name="password" />
+
+    <label for="rol">Rol</label>
+    <input id="rol" type="text" [(ngModel)]="usuario.rol.nombreRol" name="rol" disabled />
+
+    <button type="button" class="guardar-btn" (click)="guardarCambios()">Guardar</button>
+  </form>
+</div>
