@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,27 +12,37 @@ import Swal from 'sweetalert2';
   standalone: true,
   imports: [IonicModule, FormsModule],
 })
-export class LoginComponent {
-  email: string = '';
-  password: string = '';
 
-  constructor(private router: Router) {}
+  export class LoginComponent {
+  username = '';
+  password = '';
+  errorMessage = '';
 
-  iniciarSesion() {
-    if (this.email && this.password) {
-      // Aquí puedes poner la lógica de autenticación real
-      console.log('Inicio de sesión exitoso');
-    } else {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Campos obligatorios',
-        text: 'Por favor, ingresa tu correo y contraseña.',
-        confirmButtonColor: '#f44336',
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
+  login() {
+    this.authService.login({ username: this.username, password: this.password })
+      .subscribe({
+        next: (response) => {
+          this.authService.storeUserData(response);
+          const role = this.authService.getRole();
+
+          if (role === 'ROLE_ADMIN') {
+            this.router.navigate(['/view-admin']);
+          } else if (role === 'ROLE_BARBERO') {
+            this.router.navigate(['/view-client']);
+          } else if (role === 'ROLE_CLIENTE') {
+            this.router.navigate(['/view-client']);
+          } else {
+            this.errorMessage = 'Rol no reconocido';
+          }
+        },
+        error: () => {
+          this.errorMessage = 'Credenciales incorrectas';
+        }
       });
-    }
-  }
-
-  registrar() {
-    this.router.navigate(['/register']);
   }
 }

@@ -3,11 +3,14 @@
     <img src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png" alt="Golden Barbershop">
   </div>
 
-  <ion-item>
+<ion-item>
     <ion-input 
       placeholder="e-mail" 
-      [(ngModel)]="email" 
-      name="email">
+      [(ngModel)]="username" 
+      name="username"
+      type="email"
+      fill="outline"
+      label="Correo">
     </ion-input>
   </ion-item>
 
@@ -16,22 +19,29 @@
       type="password" 
       placeholder="contraseña" 
       [(ngModel)]="password" 
-      name="password">
+      name="password"
+      fill="outline"
+      label="Contraseña">
     </ion-input>
   </ion-item>
 
   <ion-button 
     expand="block" 
     color="primary" 
-    (click)="iniciarSesion()">
+    (click)="login()">
     Iniciar sesión
   </ion-button>
 
   <ion-button 
     expand="block" 
-    color="secondary" 
-    (click)="registrar()">
-    Registrar
+    fill="clear" 
+    color="medium" 
+    routerLink="/registro">
+    ¿No tienes cuenta? Regístrate
   </ion-button>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <ion-text color="danger">{{ errorMessage }}</ion-text>
+  </div>
 </ion-content>
 
