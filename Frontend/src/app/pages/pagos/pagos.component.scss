@@ -1,0 +1,159 @@
+.amex {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAACi1BMVEU...") #fff;
+}
+
+.visa {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAABvFBMVEU...") #fff;
+}
+
+.mastercard {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAACc1BMVEU...") #fff;
+}
+body {
+  background: #FEF8F8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px;
+}
+
+/* Tarjeta base */
+.tarjeta {
+  width: 320px;
+  height: 180px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  color: #fff;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Nombre del titular */
+.tarjeta .nombre {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: inherit;
+}
+
+/* Número de tarjeta */
+.tarjeta .numero {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 10px 0;
+  color: inherit;
+}
+
+/* Fecha de expiración */
+.tarjeta .expiracion {
+  font-size: 14px;
+  color: inherit;
+}
+
+/* Logo del banco o chip opcional */
+.tarjeta .chip {
+  width: 40px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tarjeta {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+//ventana emergente
+/* Fondo oscurecido */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-overlay.visible {
+  display: flex;
+}
+
+.popup-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Animación de carga */
+.loading {
+  background-color: #FFFFFF;
+  padding: 30px 0px;
+  height: 45px;
+  width: 120px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.loading > .bars {
+  margin-left: 46px;
+}
+
+.loading > .bars > .bar {
+  height: 20px;
+  width: 8px;
+  background: grey;
+  float: left;
+  margin-left: 2px;
+  border-radius: 2px;
+  animation-name: test;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.loading > .bars > .bar:first-child {
+  margin-left: 0px;
+}
+
+.loading > .text {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.loading > .bars > .bar1 { animation-delay: 0s; }
+.loading > .bars > .bar2 { animation-delay: 0.1s; }
+.loading > .bars > .bar3 { animation-delay: 0.2s; }
+
+@keyframes test {
+  0% {}
+  25% { background: black; height: 30px; margin-top: -5px; }
+  75% { background: grey; height: 20px; margin-top: 0px; }
+}

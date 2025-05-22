@@ -1,0 +1,81 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<div class="container">
+  <div id="Checkout" class="inline">
+    <h1>Pay Invoice</h1>
+    <div class="card-row">
+      <span class="visa"></span>
+      <span class="mastercard"></span>
+      <span class="amex"></span>
+      <span class="discover"></span>
+    </div>
+    <form>
+      <div class="group">
+        
+        <label for="PaymentAmount">Payment amount</label>
+        <div class="amount-placeholder">
+          <span>$</span>
+          // deberia traer a traves del id de reserva el precio a pagar
+          <span>500.00</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="NameOnCard">Name on card</label>
+        <input id="NameOnCard" class="input" type="text" maxlength="255">
+      </div>
+
+      <div class="group">
+        <label for="CreditCardNumber">Card number</label>
+        <input id="CreditCardNumber" class="input card-image" type="text">
+      </div>
+
+      <div class="group">
+        <label for="ExpiryDate">Expiry date</label>
+        <input id="ExpiryDate" class="input" type="text" placeholder="MM / YY" maxlength="7">
+      </div>
+
+      <div class="group">
+        <label for="SecurityCode">Security code</label>
+        <div class="input-container">
+          <input id="SecurityCode" class="input" type="text">
+          <i id="cvc" class="fa fa-question-circle"></i>
+        </div>
+        <div class="cvc-preview-container two-card hide">
+          <div class="amex-cvc-preview"></div>
+          <div class="visa-mc-dis-cvc-preview"></div>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="ZIPCode">ZIP/Postal code</label>
+        <div class="input-container">
+          <input id="ZIPCode" class="input" type="text" maxlength="10">
+          <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="left"
+            data-content="Enter the ZIP/Postal code for your credit card billing address.">
+            <i class="fa fa-question-circle"></i>
+          </a>
+        </div>
+      </div>
+
+      <<button onclick="mostrarCarga()">Pagar ahora</button>
+
+    </form>
+  </div>
+</div>
+
+
+<!-- Ventana emergente de carga -->
+<div id="popup-carga" class="popup-overlay" [ngClass]="{ 'visible': popupVisible }">
+  <div class="popup-content">
+    <div class="loading">
+      <div class="bars">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+      <div class="text">{{ estadoTexto }}</div>
+    </div>
+  </div>
+</div>

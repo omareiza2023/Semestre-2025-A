@@ -9,7 +9,7 @@ import { InformacionEmpresaComponent } from './pages/informacion-empresa/informa
 import { InfoUserComponent } from './pages/info-user/info-user.component';
 import { ViewAdminComponent } from './pages/view-admin/view-admin.component';
 import { ActualizarServicioComponent } from './pages/management-services/actualizar-tarifas/actualizar-tarifas.component';
-import { InfoUserComponent } from './pages/info-user/info-user.component';
+import { PagosComponent } from './pages/pagos/pagos.component';
 
 
 export const routes: Routes = [
@@ -20,11 +20,12 @@ export const routes: Routes = [
   { path: 'view-admin', component: ViewAdminComponent },
   { path: 'servicios', component: ListaServiciosComponent },
   { path: 'crear-servicio', component: CrearServicioComponent },
-  { path: 'tarifas', component: ActualizarTarifaComponent },
+  { path: 'tarifas', component: ActualizarServicioComponent },
   { path: 'info-empresa', component: InformacionEmpresaComponent},
   { path: 'info-user', component: InfoUserComponent},
   { path: 'view-client', component: ViewClientComponent },
-  { path: 'view-admin', component: ViewAdminComponent }
+  { path: 'view-admin', component: ViewAdminComponent },
+  { path: 'pagar', component: PagosComponent }
 ];
 
 
