@@ -8,21 +8,36 @@
   <form [formGroup]="form" (ngSubmit)="submit()">
     <ion-item>
       <ion-icon slot="start" [icon]="icons.personOutline"></ion-icon>
-      <ion-input placeholder="Nombre Completo" formControlName="nombre"></ion-input>
+      <ion-input placeholder="Nombre" formControlName="nombre"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-icon slot="start" [icon]="icons.personOutline"></ion-icon>
+      <ion-input placeholder="Apellido" formControlName="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" [icon]="icons.personOutline"></ion-icon>
+      <ion-input placeholder="Documento" formControlName="documento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" [icon]="icons.personOutline"></ion-icon>
+      <ion-input placeholder="Teléfono" formControlName="telefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" [icon]="icons.mailOutline"></ion-icon>
       <ion-input placeholder="Email" formControlName="email" type="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-icon slot="start" [icon]="icons.lockClosedOutline"></ion-icon>
       <ion-input placeholder="Password" formControlName="password" type="password"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-icon slot="start" [icon]="icons.lockClosedOutline"></ion-icon>
       <ion-input placeholder="Confirme su Password" formControlName="confirmPassword" type="password"></ion-input>
     </ion-item>
 

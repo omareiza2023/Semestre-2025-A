@@ -16,4 +16,3 @@ export const routes: Routes = [
   { path: 'view-client', component: ViewClientComponent },
   { path: 'view-admin', component: ViewAdminComponent }
 ];
-
