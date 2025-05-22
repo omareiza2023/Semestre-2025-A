@@ -8,3 +8,13 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+:root {
+  --ion-color-warning: #d4a017;
+  --ion-color-warning-rgb: 212, 160, 23;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #bb8e13;
+  --ion-color-warning-tint: #d9ad2d;
+}
