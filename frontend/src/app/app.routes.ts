@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -8,6 +9,8 @@ import { InformacionEmpresaComponent } from './pages/informacion-empresa/informa
 import { InfoUserComponent } from './pages/info-user/info-user.component';
 import { ViewAdminComponent } from './pages/view-admin/view-admin.component';
 import { ActualizarServicioComponent } from './pages/management-services/actualizar-tarifas/actualizar-tarifas.component';
+import { InfoUserComponent } from './pages/info-user/info-user.component';
+
 
 export const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
@@ -17,9 +20,11 @@ export const routes: Routes = [
   { path: 'view-admin', component: ViewAdminComponent },
   { path: 'servicios', component: ListaServiciosComponent },
   { path: 'crear-servicio', component: CrearServicioComponent },
-  { path: 'tarifas', component: ActualizarServicioComponent },
+  { path: 'tarifas', component: ActualizarTarifaComponent },
   { path: 'info-empresa', component: InformacionEmpresaComponent},
   { path: 'info-user', component: InfoUserComponent},
   { path: 'view-client', component: ViewClientComponent },
   { path: 'view-admin', component: ViewAdminComponent }
 ];
+
+

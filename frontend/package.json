@@ -23,6 +23,7 @@
     "@capacitor/core": "7.2.0",
     "@ionic/angular": "^8.5.5",
     "@ionic/pwa-elements": "^3.3.0",
+    "app-photo-tutorial-2025-04-18": "file:",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.21.2",
     "tslib": "^2.3.0",
