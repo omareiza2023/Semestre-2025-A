@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="top-bar">
+    <button class="back-button" (click)="volver()">←</button>
+    <h2>Actualizar Servicio</h2>
+  </div>
+
+  <form>
+    <label for="servicio">Servicio</label>
+    <ion-select id="servicio" [(ngModel)]="servicioSeleccionado" name="servicio"
+      (ionChange)="seleccionarServicio($event.detail.value)" interface="popover" placeholder="Seleccione un servicio">
+      <ion-select-option *ngFor="let s of servicios" [value]="s.id">
+        {{ s.nombre }}
+      </ion-select-option>
+    </ion-select>
+
+
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre" />
+
+    <label for="descripcion">Descripción</label>
+    <input id="descripcion" type="text" [(ngModel)]="descripcion" name="descripcion" />
+
+    <label for="categoria">Categoría</label>
+    <ion-select id="categoria" [(ngModel)]="idCategoriaServicio" name="categoria" interface="popover"
+      placeholder="Seleccione una categoría">
+      <ion-select-option *ngFor="let c of categorias" [value]="c.id">
+        {{ c.nombre }} - ${{ c.precio }}
+      </ion-select-option>
+    </ion-select>
+
+    <button type="button" class="actualizar-btn" (click)="actualizarServicio()">Actualizar</button>
+  </form>
+</div>
