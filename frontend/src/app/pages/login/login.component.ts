@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../services/auth.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,7 +18,7 @@ import { AuthService } from '../services/auth.service';
   username = '';
   password = '';
   errorMessage = '';
-
+    
   constructor(
     private authService: AuthService,
     private router: Router
@@ -44,5 +45,13 @@ import { AuthService } from '../services/auth.service';
           this.errorMessage = 'Credenciales incorrectas';
         }
       });
-  }
+  
+
+  iniciarSesion() {
+    if (this.username && this.password) {
+      // Aquí puedes poner la lógica de autenticación real
+      console.log('Inicio de sesión exitoso');
+    } else {
+      alert("Campos obligatorios");
+    }
 }

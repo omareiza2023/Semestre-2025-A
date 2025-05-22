@@ -25,7 +25,7 @@
     "@ionic/pwa-elements": "^3.3.0",
     "app-photo-tutorial-2025-04-18": "file:",
     "rxjs": "~7.8.0",
-    "sweetalert2": "^11.21.1",
+    "sweetalert2": "^11.21.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

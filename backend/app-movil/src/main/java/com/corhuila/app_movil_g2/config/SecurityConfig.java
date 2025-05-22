@@ -1,5 +1,6 @@
 package com.corhuila.app_movil_g2.config;
 
+import java.util.List;
 import com.corhuila.app_movil_g2.Services.IUsuarioService; // Usamos nuestra implementación de UserDetailsService
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +14,13 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import static org.springframework.security.config.Customizer.withDefaults;
+
+
+
 
 @Configuration
 @EnableWebSecurity // Habilita la seguridad web de Spring Security
@@ -37,6 +45,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+            .cors(withDefaults())
             .csrf(csrf -> csrf.disable()) // Deshabilita CSRF para APIs REST sin estado (si usas sesiones, podrías necesitar habilitarlo)
             .authorizeHttpRequests(auth -> auth
                 // Permite acceso público a la documentación de Swagger
@@ -63,12 +72,22 @@ public class SecurityConfig {
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)) // Usar sesiones si es necesario (comportamiento por defecto)
-            // .formLogin(Customizer.withDefaults()); // Habilita el login por formulario por defecto
-            // .httpBasic(Customizer.withDefaults()); // Habilita autenticación básica HTTP por defecto
-            .httpBasic(basic -> basic.realmName("Barbershop API")); // Configura autenticación básica con un nombre de reino
-
+            .httpBasic(basic -> basic.realmName("Barbershop API"));
         return http.build();
     }
 
-     // Se puede añadir un método para inicializar roles y un usuario admin al inicio si la base de datos está vacía
+
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("http://localhost:4200")); // tu frontend
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(List.of("*"));
+        configuration.setAllowCredentials(true); // si usas cookies
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
 }

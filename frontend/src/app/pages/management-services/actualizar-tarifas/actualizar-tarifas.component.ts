@@ -1,64 +1,90 @@
-import { Component } from '@angular/core';
-import Swal from 'sweetalert2';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ServicioService } from '../../../services/servicio.service';
+import { IonSelect, IonSelectOption } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-actualizar-tarifa',
+  selector: 'app-actualizar-servicio',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './actualizar-tarifa.component.html',
+  imports: [CommonModule, FormsModule, IonSelect,IonSelectOption],
+  templateUrl: './actualizar-tarifas.component.html',
   styleUrls: ['./actualizar-tarifa.component.css']
 })
-export class ActualizarTarifaComponent {
-  servicios = [
-    { id: 1, nombre: 'Corte', tarifa: 25000 },
-    { id: 2, nombre: 'Corte + Barba', tarifa: 45000 },
-    { id: 3, nombre: 'Cejas', tarifa: 8000 },
-    { id: 4, nombre: 'Manicura', tarifa: 40000 }
-  ];
-  
-  servicioSeleccionado: number | null = null;
-  nuevaTarifa: number | null = null;
+export class ActualizarServicioComponent implements OnInit {
+  servicios: any[] = [];
+  categorias: any[] = [];
 
-  actualizarTarifa() {
-    if (!this.servicioSeleccionado || !this.nuevaTarifa) {
-      Swal.fire({
-        title: 'Campos incompletos',
-        text: 'Seleccione un servicio y defina una nueva tarifa',
-        icon: 'warning',
-        confirmButtonText: 'Ok'
-      });
-      return;
-    }
+  servicioSeleccionado: any = null;
+  nombre: string = '';
+  descripcion: string = '';
+  idCategoriaServicio: number | null = null;
 
-    const servicio = this.servicios.find(s => s.id === this.servicioSeleccionado);
+  username: string = 'admin';
+  password: string = 'admin123';
 
-    Swal.fire({
-      title: '¿Desea actualizar la tarifa?',
-      text: `${servicio?.nombre} - Nueva tarifa: $${this.nuevaTarifa ?? 0} COP`,
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonText: 'Sí, actualizar',
-      cancelButtonText: 'No, cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        servicio!.tarifa = this.nuevaTarifa ?? 0;
+  constructor(private servicioService: ServicioService) {}
 
-        Swal.fire({
-          title: '¡Tarifa actualizada exitosamente!',
-          icon: 'success',
-          timer: 2000,
-          showConfirmButton: false
-        });
+  ngOnInit(): void {
+    this.cargarServicios();
+    this.cargarCategorias();
+  }
 
-        this.servicioSeleccionado = null;
-        this.nuevaTarifa = null;
-      }
+  cargarServicios(): void {
+    this.servicioService.obtenerServiciosActivos().subscribe({
+      next: (data) => this.servicios = data,
+      error: () => alert('Error al cargar servicios')
     });
   }
 
-  volver() {
-    // Aquí irá la lógica de navegación para volver al listado
+  cargarCategorias(): void {
+    this.servicioService.obtenerCategoriasActivas(this.username, this.password).subscribe({
+      next: (data) => this.categorias = data,
+      error: () => alert('Error al cargar categorías')
+    });
+  }
+
+  seleccionarServicio(id: number): void {
+    const servicio = this.servicios.find(s => s.id === id);
+    if (servicio) {
+      this.servicioSeleccionado = servicio;
+      this.nombre = servicio.nombre;
+      this.descripcion = servicio.descripcion;
+      this.idCategoriaServicio = servicio.categoriaServicio?.id || null;
+    }
+  }
+
+  actualizarServicio(): void {
+    if (!this.servicioSeleccionado || !this.nombre || !this.descripcion || !this.idCategoriaServicio) {
+      alert("Completa todos los campos");
+      return;
+    }
+
+    const payload = {
+      nombre: this.nombre,
+      descripcion: this.descripcion,
+      idCategoriaServicio: this.idCategoriaServicio
+    };
+
+    this.servicioService.actualizarServicioTarifa(
+      this.servicioSeleccionado.id,
+      payload,
+      this.username,
+      this.password
+    ).subscribe({
+      next: () => {
+        alert('Servicio actualizado');
+        this.servicioSeleccionado = null;
+        this.nombre = '';
+        this.descripcion = '';
+        this.idCategoriaServicio = null;
+        this.cargarServicios();
+      },
+      error: () => alert('Error al actualizar el servicio')
+    });
+  }
+
+  volver(): void {
+    history.back();
   }
 }
