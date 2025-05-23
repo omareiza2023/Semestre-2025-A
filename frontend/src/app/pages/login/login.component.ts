@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -45,6 +44,7 @@ import { AuthService } from '../services/auth.service';
           this.errorMessage = 'Credenciales incorrectas';
         }
       });
+  }
   
 
   iniciarSesion() {
@@ -54,4 +54,5 @@ import { AuthService } from '../services/auth.service';
     } else {
       alert("Campos obligatorios");
     }
+  }
 }
