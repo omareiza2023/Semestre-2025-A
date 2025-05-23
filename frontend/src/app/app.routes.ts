@@ -9,6 +9,8 @@ import { InformacionEmpresaComponent } from './pages/informacion-empresa/informa
 import { InfoUserComponent } from './pages/info-user/info-user.component';
 import { ViewAdminComponent } from './pages/view-admin/view-admin.component';
 import { ActualizarServicioComponent } from './pages/management-services/actualizar-tarifas/actualizar-tarifas.component';
+import { AgendarCitaComponent } from './pages/agendar-cita/agendar-cita.component';
+import { ListaReservasComponent } from './pages/lista-reservas/lista-reservas.component';
 
 
 
@@ -24,7 +26,8 @@ export const routes: Routes = [
   { path: 'info-empresa', component: InformacionEmpresaComponent},
   { path: 'info-user', component: InfoUserComponent},
   { path: 'view-client', component: ViewClientComponent },
-  { path: 'view-admin', component: ViewAdminComponent }
+  { path: 'agendar-cita', component: AgendarCitaComponent },
+  { path: 'mis-reservas', component: ListaReservasComponent },
 ];
 
 

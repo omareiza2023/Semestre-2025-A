@@ -55,4 +55,8 @@ import { AuthService } from '../../services/auth.service';
       alert("Campos obligatorios");
     }
   }
+
+  salir(){
+     this.router.navigate(['/register']);
+  }
 }

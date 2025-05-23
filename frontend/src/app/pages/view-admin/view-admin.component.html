@@ -1,47 +1,36 @@
 <ion-content class="admin-container" fullscreen>
   <ion-grid class="card-grid">
     <ion-row>
-      <ion-col size="4">
-        <ion-card button (click)="navigateTo('/gestionar-horarios')" class="card">
-          <img src="assets/icons/schedule.svg" alt="Gestionar Horarios" />
-          <ion-card-content>Gestionar Horarios</ion-card-content>
-        </ion-card>
-      </ion-col>
 
       <ion-col size="4">
-        <ion-card button (click)="navigateTo('/reservas')" class="card">
-          <img src="assets/icons/reserve.svg" alt="Gestionar Reservas" />
-          <ion-card-content>Gestionar Reservas</ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4">
-        <ion-card button (click)="navigateTo('/informacion')" class="card">
-          <img src="assets/icons/edit-info.svg" alt="Editar Información" />
-          <ion-card-content>Editar Información</ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="4">
-        <ion-card button (click)="navigateTo('/gestionar-servicios')" class="card">
+        <ion-card button (click)="navigateTo('/servicios')" class="card">
           <img src="assets/icons/services.svg" alt="Servicios" />
           <ion-card-content>Servicios</ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col size="4">
-        <ion-card button (click)="navigateTo('/info-empresa')" class="card">
-          <img src="assets/icons/company.svg" alt="Gestión Empresa" />
-          <ion-card-content>Gestión Empresa</ion-card-content>
+        <ion-card button (click)="navigateTo('/crear-servicio')" class="card">
+          <img src="assets/icons/services.svg" alt="Crear Servicios" />
+          <ion-card-content>Crear Servicios</ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col size="4">
-        <ion-card button (click)="navigateTo('/gestionar-tarifas')" class="card">
+        <ion-card button (click)="navigateTo('/tarifas')" class="card">
           <img src="assets/icons/rates.svg" alt="Gestionar Tarifas" />
           <ion-card-content>Gestionar Tarifas</ion-card-content>
         </ion-card>
       </ion-col>
+
+      <ion-col size="4">
+        <ion-card button (click)="navigateTo('/info-empresa')" class="card">
+          <img src="assets/icons/services.svg" alt="Servicios" />
+          <ion-card-content>Información Empresa</ion-card-content>
+        </ion-card>
+      </ion-col>
+
+
     </ion-row>
   </ion-grid>
 
