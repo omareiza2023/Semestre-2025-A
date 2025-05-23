@@ -57,6 +57,6 @@ export class AuthService {
 
 
    registrarCliente(data: any): Observable<any> {
-    return this.http.post(`${API_URL}/registrar/cliente`, data);
+    return this.http.post(`http://localhost:8080/api/auth/registrar/cliente`, data);
   }
 }
