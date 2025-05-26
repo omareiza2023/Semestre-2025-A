@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container" style="
+height: 100vh;
+overflow-y: scroll;">
   <div class="top-bar">
     <button class="back-button" (click)="volver()">←</button>
     <h2>Editar perfil</h2>
@@ -26,6 +28,6 @@
     <label for="rol">Rol</label>
     <input id="rol" type="text" [(ngModel)]="usuario.rol.nombreRol" name="rol" disabled />
 
-    <button type="button" class="guardar-btn" (click)="guardarCambios()">Guardar</button>
+   
   </form>
 </div>

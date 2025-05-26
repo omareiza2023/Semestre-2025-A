@@ -1,41 +1,73 @@
-.admin-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
   padding: 16px;
-  gap: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
 }
 
-.card-grid {
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
   width: 100%;
-  max-width: 400px;
-  margin: auto;
 }
 
-.card {
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f9ff;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.card-button:hover {
+  background-color: #d0e7ff;
+}
+
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 10px;
-  padding: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: #f7f9fc;
-
-  img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-
-  &:hover {
-    background-color: #e8f0fe;
-  }
 }
 
-.logout-container {
-  width: 100%;
-  padding: 0 16px;
+.card-content span {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.logout-button {
+  background-color: #f55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #e44;
 }

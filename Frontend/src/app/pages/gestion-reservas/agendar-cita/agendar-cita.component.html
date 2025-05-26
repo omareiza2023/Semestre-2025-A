@@ -1,0 +1,42 @@
+<div class="container" style="height: 100vh;overflow-y: scroll;">
+    <div class="top-bar">
+        <button class="back-button" (click)="volver()">←</button>
+        <h2>Agendar Cita</h2>
+    </div>
+    <img src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png"
+        alt="Golden Barbershop" class="logo" />
+
+    <form>
+        <label for="fecha">Fecha</label>
+        <ion-datetime id="fecha" [(ngModel)]="fecha" name="fecha" presentation="date" class="custom-datetime">
+        </ion-datetime>
+
+        <label for="hora">Hora</label>
+        <ion-select id="hora" [(ngModel)]="hora" name="hora" placeholder="Seleccione un horario" interface="popover">
+            <ion-select-option *ngFor="let h of horasDisponibles" [value]="h">
+                {{ h }}
+            </ion-select-option>
+        </ion-select>
+
+        <label for="servicio">Servicio</label>
+        <ion-select id="servicio" [(ngModel)]="idServicio" name="servicio" placeholder="Seleccione un servicio"
+            interface="popover">
+            <ion-select-option *ngFor="let s of servicios" [value]="s.id">
+                {{ s.nombre }} - ${{ s.categoriaServicio?.precio }}
+            </ion-select-option>
+        </ion-select>
+
+        <label for="barbero">Barbero</label>
+        <ion-select id="barbero" [(ngModel)]="idBarbero" name="barbero" placeholder="Seleccione un barbero"
+            interface="popover">
+            <ion-select-option *ngFor="let b of barberos" [value]="b.id">
+                {{ b.persona.nombre }} {{ b.persona.apellido }}
+            </ion-select-option>
+        </ion-select>
+
+        <button type="button" class="crear-btn" [disabled]="!fecha || !hora || !idServicio  || !idBarbero"
+            (click)="confirmarCita()">
+            Confirmar Cita
+        </button>
+    </form>
+</div>

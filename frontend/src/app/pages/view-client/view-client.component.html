@@ -1,45 +1,52 @@
 <ion-content class="container">
   <div class="profile-header">
-    <img src="assets/perfil-cliente.png" alt="Perfil" class="profile-img">
-    <h3>Welcome back,</h3>
-    <h2>cliente T-800</h2>
+    <img src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/perfil.png?raw=true" alt="Perfil" class="profile-img">
+    <h3>!Bienvenido!</h3>
   </div>
 
   <div class="grid-buttons">
     <button class="card-button" (click)="navigateToWhatsApp()">
       <div class="card-content">
-        <ion-icon name="chatbox-ellipses-outline" class="icon"></ion-icon>
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/contactos.png?raw=true">
         <span>Contactarnos</span>
       </div>
     </button>
 
-    <button class="card-button" routerLink="/reservas">
+    <button class="card-button" routerLink="/mis-reservas">
       <div class="card-content">
-        <ion-icon name="calendar-outline" class="icon"></ion-icon>
-        <span>Reservas</span>
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/reserva.png?raw=true">
+        <span>Mis<br>Reservas</span>
       </div>
     </button>
 
-    <button class="card-button" routerLink="/informacion">
+    <button class="card-button" routerLink="/agendar-cita">
       <div class="card-content">
-        <ion-icon name="person-outline" class="icon"></ion-icon>
-        <span>Editar información</span>
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/calendario.png?raw=true">
+        <span>Agendar</span>
+      </div>
+    </button>
+
+    <button class="card-button" routerLink="/info-user">
+      <div class="card-content">
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/editar.png?raw=true">
+        <span>Editar<br>información</span>
       </div>
     </button>
 
     <button class="card-button" (click)="navigateToGoogleMaps()">
       <div class="card-content">
-        <ion-icon name="location-outline" class="icon"></ion-icon>
-        <span>Ubicación de la barbería</span>
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/ubicacion.png?raw=true" >
+        <span>Ubicación</span>
       </div>
     </button>
 
     <button class="card-button" (click)="confirmDeleteAccount()">
       <div class="card-content">
-        <ion-icon name="trash-outline" class="icon"></ion-icon>
-        <span>Eliminar cuenta</span>
+        <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/eliminar.png?raw=true">
+        <span>Eliminar<br>Cuenta</span>
       </div>
     </button>
+    
   </div>
 
   <button class="logout-button" (click)="confirmLogout()">Cerrar sesión</button>

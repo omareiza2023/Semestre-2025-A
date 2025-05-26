@@ -14,6 +14,7 @@ import { IonItem, IonList, IonSelect, IonSelectOption } from '@ionic/angular/sta
 export class CrearServicioComponent implements OnInit {
   nombreServicio: string = '';
   descripcion: string = '';
+  precio: string = '';
   idCategoriaServicio: number | null = null;
   username: string = 'admin';
   password: string = 'admin123';
@@ -41,7 +42,7 @@ export class CrearServicioComponent implements OnInit {
   }
 
   crearServicio(): void {
-    if (!this.nombreServicio || !this.descripcion || !this.idCategoriaServicio) {
+    if (!this.nombreServicio || !this.descripcion || !this.precio || !this.idCategoriaServicio) {
       alert('Por favor completa todos los campos.');
       return;
     }
@@ -53,6 +54,7 @@ export class CrearServicioComponent implements OnInit {
     const payload = {
       nombre: this.nombreServicio,
       descripcion: this.descripcion,
+      precio: this.precio,
       idCategoriaServicio: this.idCategoriaServicio
     };
 

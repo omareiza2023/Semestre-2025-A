@@ -1,0 +1,13 @@
+<div class="formulario-container">
+  <form [formGroup]="categoriaForm" (ngSubmit)="guardar()">
+    <label for="nombre">Nombre</label>
+    <input id="nombre" type="text" formControlName="nombre" />
+
+    <label for="descripcion">descripcion</label>
+    <input id="descripcion" type="text" formControlName="descripcion" />
+
+    <button type="submit" class="btn-guardar" [disabled]="!categoriaForm.valid">
+      Guardar
+    </button>
+  </form>
+</div>

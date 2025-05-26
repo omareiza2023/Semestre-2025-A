@@ -1,0 +1,55 @@
+.contenedor-categorias {
+  padding: 1rem;
+  background-color: white;
+}
+
+.card-categoria {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-categoria h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.card-categoria p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn-editar {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-crear {
+  background-color: #e0a800;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}

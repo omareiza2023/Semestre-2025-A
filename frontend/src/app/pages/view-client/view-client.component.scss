@@ -4,6 +4,8 @@
   align-items: center;
   margin-top: 20px;
   padding: 16px;
+  background-color: #c4c4c4; /* Fondo gris claro agregado */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la vista */
 }
 
 .profile-header {
@@ -66,4 +68,3 @@
 .logout-button:hover {
   background-color: #e44;
 }
-

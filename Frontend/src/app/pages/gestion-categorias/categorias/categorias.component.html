@@ -1,0 +1,14 @@
+<div class="contenedor-categorias" style="
+    height: 100vh;
+    overflow-y: scroll;
+">
+  <div *ngFor="let categoria of categorias" class="card-categoria">
+    <h3>{{ categoria.nombre }}</h3>
+    <p>Descipcion: {{ categoria.descripcion }}</p>
+    <div class="botones">
+      <button class="btn-editar" (click)="editarCategoria(categoria.id)">Editar</button>
+    </div>
+  </div>
+
+  <button class="btn-crear" (click)="crearCategoria()">Crear nueva categoría</button>
+</div>
