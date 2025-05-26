@@ -1,4 +1,72 @@
 <ion-content class="admin-container" fullscreen>
+
+    <div class="profile-header">
+    <img src="data:image/png;base64,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" alt="Perfil" class="profile-img">
+    <h3>!Bienvenido!</h3>
+  </div>
+
+  <div class="grid-buttons">
+
+       <button class="card-button" routerLink="/servicios">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/portapapeles.png?raw=true">
+          <span>Servicios</span>
+        </div>
+      </button>
+
+      <button class="card-button" routerLink="/crear-servicio">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/agregar.png?raw=true">
+          <span>Crear<br>Servicio</span>
+        </div>
+      </button>
+
+      <button class="card-button" routerLink="/tarifas">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/etiqueta-del-precio.png?raw=true">
+          <span>Gestionar<br> Tarifas</span>
+        </div>
+      </button>
+
+      <button class="card-button" routerLink="/info-empresa">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/grandes-almacenes.png?raw=true">
+          <span>Info.Empresa</span>
+        </div>
+      </button>
+
+      <button class="card-button" routerLink="/mis-reservas">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/reserva.png?raw=true">
+          <span>Gestionar <br>
+                Reservas</span>
+        </div>
+      </button>
+      
+      <button class="card-button" routerLink="/agendar-cita">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/Semestre-2025-A/blob/feature/document/documentacion/recursosAdicionales/calendario.png?raw=true">
+          <span>Agendar</span>
+        </div>
+      </button>
+
+      <button class="card-button" routerLink="/categoria">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/categorizacion.png?raw=true">
+          <span>Gestion<br>Categorias</span>
+        </div>
+      </button>
+
+        <button class="card-button" routerLink="/barberos">
+        <div class="card-content">
+          <img width="34" src="https://github.com/omareiza2023/img/blob/main/corte-de-pelo.png?raw=true">
+          <span>Gestion<br>Barberos</span>
+        </div>
+      </button>
+      
+
+  </div>
+
   <ion-grid class="card-grid">
     <ion-row>
 
@@ -33,6 +101,7 @@
 
     </ion-row>
   </ion-grid>
+
 
   <div class="logout-container">
     <ion-button color="danger" expand="block" (click)="cerrarSesion()">Cerrar sesión</ion-button>

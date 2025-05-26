@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/login/login.component.scss"],
+  "sourcesContent": [".login-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n\n  .logo {\n    text-align: center;\n    margin-bottom: 20px;\n\n    img {\n      width: 100px;\n      height: auto;\n    }\n\n    h1 {\n      color: #f2b705;\n      margin: 0;\n    }\n\n    p {\n      color: #a5a5a5;\n      font-size: 14px;\n    }\n  }\n\n\n  ion-button {\n    margin-top: 10px;\n    --border-radius: 8px;\n    &.ion-color-primary {\n      --background: #64b5f6;\n    }\n    &.ion-color-secondary {\n      --background: #81d4fa;\n    }\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;AACA,mBAAA;AACA,UAAA;;AAEA,CAPF,gBAOE,CAAA;AACE,cAAA;AACA,iBAAA;;AAEA,CAXJ,gBAWI,CAJF,KAIE;AACE,SAAA;AACA,UAAA;;AAGF,CAhBJ,gBAgBI,CATF,KASE;AACE,SAAA;AACA,UAAA;;AAGF,CArBJ,gBAqBI,CAdF,KAcE;AACE,SAAA;AACA,aAAA;;AAKJ,CA5BF,gBA4BE;AACE,cAAA;AACA,mBAAA;;AACA,CA/BJ,gBA+BI,UAAA,CAAA;AACE,gBAAA;;AAEF,CAlCJ,gBAkCI,UAAA,CAAA;AACE,gBAAA;;",
+  "names": []
+}

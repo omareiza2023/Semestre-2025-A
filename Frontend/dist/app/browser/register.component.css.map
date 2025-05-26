@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/register/register.component.scss"],
+  "sourcesContent": [".logo {\n  text-align: center;\n  margin-top: 40px;\n\n  img {\n    height: 60px;\n  }\n\n  h1 {\n    margin: 0;\n    font-size: 24px;\n    font-weight: bold;\n    color: #d4a017;\n  }\n\n  .slogan {\n    font-style: italic;\n    color: #d4a017;\n    margin-top: -5px;\n  }\n}\n\n.title {\n  text-align: center;\n  margin: 30px 0 20px;\n  font-weight: bold;\n}\n\n.footer {\n  text-align: center;\n  margin-top: 20px;\n  font-size: 14px;\n\n  a {\n    color: #d4a017;\n    font-weight: bold;\n    text-decoration: none;\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,cAAA;;AAEA,CAJF,KAIE;AACE,UAAA;;AAGF,CARF,KAQE;AACE,UAAA;AACA,aAAA;AACA,eAAA;AACA,SAAA;;AAGF,CAfF,KAeE,CAAA;AACE,cAAA;AACA,SAAA;AACA,cAAA;;AAIJ,CAAA;AACE,cAAA;AACA,UAAA,KAAA,EAAA;AACA,eAAA;;AAGF,CAAA;AACE,cAAA;AACA,cAAA;AACA,aAAA;;AAEA,CALF,OAKE;AACE,SAAA;AACA,eAAA;AACA,mBAAA;;",
+  "names": []
+}

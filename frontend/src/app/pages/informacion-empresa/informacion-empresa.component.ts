@@ -12,6 +12,7 @@ import { IonicModule } from '@ionic/angular';
   styleUrls: ['./informacion-empresa.component.scss']
 })
 export class InformacionEmpresaComponent {
+  
   horarios: string = '';
   ubicacion: string = '';
   ciudad: string = '';

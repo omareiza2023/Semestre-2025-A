@@ -4,18 +4,46 @@
     <h2>Información empresa</h2>
   </div>
 
-  <img src="assets/logo-goldenbarbershop.png" alt="Golden Barbershop" class="logo" />
+  <img
+    src="https://raw.githubusercontent.com/omareiza2023/Semestre-2025-A/refs/heads/feature/HU-02/recursos-adicionales/3.png"
+    alt="Golden Barbershop"
+    class="logo"
+  />
 
   <form>
     <label for="horarios">Horarios</label>
-    <input id="horarios" type="text" [(ngModel)]="horarios" name="horarios" />
+    <input
+      id="horarios"
+      type="text"
+      [(ngModel)]="horarios"
+      name="horarios"
+      placeholder="8:00am a 1pm y de 3:00pm a 7:00pm"
+    />
 
     <label for="ubicacion">Ubicación</label>
-    <input id="ubicacion" type="text" [(ngModel)]="ubicacion" name="ubicacion" />
+    <input
+      id="ubicacion"
+      type="text"
+      [(ngModel)]="ubicacion"
+      name="ubicacion"
+      placeholder="Calle 8 No. 32 - 49"
+    />
 
     <label for="ciudad">Ciudad/Departamento</label>
-    <input id="ciudad" type="text" [(ngModel)]="ciudad" name="ciudad" />
-
-    <button type="button" class="guardar-btn" (click)="guardarInformacion()">Guardar</button>
+    <input
+      id="ciudad"
+      type="text"
+      [(ngModel)]="ciudad"
+      name="ciudad"
+      placeholder="Neiva - Huila"
+    />
   </form>
+
+  <button class="card-button" routerLink="/view-admin">
+    <div class="card-content">
+      <span>Guardar</span>
+    </div>
+  </button>
 </div>
+
+

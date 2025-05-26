@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  padding: 16px;
+  background-color: #fff;
+  height: 100%;
+}
+
+ion-header,
+ion-content {
+  --background: #fff;
+}
+
+ion-card {
+  margin-bottom: 16px;
+}
+
+ion-button.crear-barbero {
+  --background: #e0a800;
+  --background-activated: #c29500;
+  --background-focused: #c29500;
+  --background-hover: #d4a900;
+  --color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 24px;
+  display: block;
+}
+
+ion-button.crear-barbero:disabled {
+  --background: #f0e7a1;
+  --color: #b3a83f;
+}

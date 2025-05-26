@@ -10,7 +10,9 @@ export interface LoginResponse {
   roles: string[];
 }
 
+const API_URL = 'https://pelican-alert-ram.ngrok-free.app/api/usuarios';
 const API_URL = 'http://localhost:8080/api/usuarios';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -57,6 +59,7 @@ export class AuthService {
 
 
    registrarCliente(data: any): Observable<any> {
+    return this.http.post('https://pelican-alert-ram.ngrok-free.app/api/usuarios/registrar/cliente', data);
     return this.http.post(`http://localhost:8080/api/auth/registrar/cliente`, data);
   }
 }

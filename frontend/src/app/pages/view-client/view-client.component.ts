@@ -13,11 +13,11 @@ import { CommonModule } from '@angular/common';
 export class ViewClientComponent {
 
   navigateToWhatsApp() {
-    window.open('https://wa.me/3001234567', '_blank');
+    window.open('https://wa.me/3165655749', '_blank');
   }
 
   navigateToGoogleMaps() {
-    window.open('https://www.google.com/maps?q=Barberia+Golden+Huila', '_blank');
+    window.open('https://maps.app.goo.gl/phbxXssgtPKmdeR69', '_blank');
   }
 
   confirmDeleteAccount() {

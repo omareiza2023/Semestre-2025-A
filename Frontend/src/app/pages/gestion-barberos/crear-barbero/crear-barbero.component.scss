@@ -1,0 +1,53 @@
+:host {
+  display: block;
+  padding: 16px;
+  background-color: #fff;
+  height: 100%;
+}
+
+ion-header,
+ion-content {
+  --background: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ion-item {
+  --background: #f9f9f9;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+ion-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+ion-input,
+ion-textarea {
+  --padding-start: 8px;
+}
+
+ion-button {
+  --background: #e0a800;
+  --background-activated: #c29500;
+  --background-focused: #c29500;
+  --background-hover: #d4a900;
+  --color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+ion-button[expand="block"] {
+  width: 100%;
+}
+
+ion-button:disabled {
+  --background: #f0e7a1;
+  --color: #b3a83f;
+}

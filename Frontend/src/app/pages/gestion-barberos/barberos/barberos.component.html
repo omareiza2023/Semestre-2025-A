@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-card *ngFor="let barbero of barberos">
+    <ion-card-header>
+      <ion-card-title>{{ barbero.persona.nombre }} {{ barbero.persona.apellido }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Usuario:</strong> {{ barbero.username }}</p>
+      <p><strong>Documento:</strong> {{ barbero.persona.documento }}</p>
+      <p><strong>Teléfono:</strong> {{ barbero.persona.telefono }}</p>
+
+      <!-- <div class="button-group">
+        <ion-button color="primary" (click)="editarBarbero(barbero.id)">Editar</ion-button>
+        <ion-button color="danger" (click)="eliminarBarbero(barbero.id)">Eliminar</ion-button>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+
+  <div class="crear-btn-container">
+    <ion-button (click)="crearBarbero()" style="background-color: #e0a800; color: black;">
+      Crear Barbero
+    </ion-button>
+  </div>
+</ion-content>

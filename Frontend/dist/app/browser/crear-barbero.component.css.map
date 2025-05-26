@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/gestion-barberos/crear-barbero/crear-barbero.component.scss"],
+  "sourcesContent": [":host {\r\n  display: block;\r\n  padding: 16px;\r\n  background-color: #fff;\r\n  height: 100%;\r\n}\r\n\r\nion-header,\r\nion-content {\r\n  --background: #fff;\r\n}\r\n\r\nform {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 16px;\r\n}\r\n\r\nion-item {\r\n  --background: #f9f9f9;\r\n  border-radius: 6px;\r\n  padding: 8px 12px;\r\n}\r\n\r\nion-label {\r\n  font-weight: 600;\r\n  font-size: 1rem;\r\n  color: #333;\r\n}\r\n\r\nion-input,\r\nion-textarea {\r\n  --padding-start: 8px;\r\n}\r\n\r\nion-button {\r\n  --background: #e0a800;\r\n  --background-activated: #c29500;\r\n  --background-focused: #c29500;\r\n  --background-hover: #d4a900;\r\n  --color: #fff;\r\n  font-weight: 600;\r\n  border-radius: 6px;\r\n}\r\n\r\nion-button[expand=\"block\"] {\r\n  width: 100%;\r\n}\r\n\r\nion-button:disabled {\r\n  --background: #f0e7a1;\r\n  --color: #b3a83f;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,WAAA;AACA,WAAA;AACA,oBAAA;AACA,UAAA;;AAGF;AAAA;AAEE,gBAAA;;AAGF;AACE,WAAA;AACA,kBAAA;AACA,OAAA;;AAGF;AACE,gBAAA;AACA,iBAAA;AACA,WAAA,IAAA;;AAGF;AACE,eAAA;AACA,aAAA;AACA,SAAA;;AAGF;AAAA;AAEE,mBAAA;;AAGF;AACE,gBAAA;AACA,0BAAA;AACA,wBAAA;AACA,sBAAA;AACA,WAAA;AACA,eAAA;AACA,iBAAA;;AAGF,UAAA,CAAA;AACE,SAAA;;AAGF,UAAA;AACE,gBAAA;AACA,WAAA;;",
+  "names": []
+}

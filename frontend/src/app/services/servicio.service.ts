@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class ServicioService {
-    private baseUrl = 'http://localhost:8080/api/';
+    private baseUrl = 'https://pelican-alert-ram.ngrok-free.app/api/';
 
     constructor(private http: HttpClient) { }
 
@@ -21,14 +21,19 @@ export class ServicioService {
 
     obtenerCategoriasActivas(username: string, password: string): Observable<any[]> {
         const headers = new HttpHeaders({
-            Authorization: 'Basic ' + btoa(`${username}:${password}`)
+            Authorization: 'Basic ' + btoa(`${username}:${password}`),
+            'ngrok-skip-browser-warning': 'true'
         });
         return this.http.get<any[]>(`${this.baseUrl}categoriaservicios`, { headers });
     }
 
 
     obtenerServiciosActivos(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.baseUrl}servicios/activos`);
+        const headers = new HttpHeaders({
+            'ngrok-skip-browser-warning': 'true'
+        });
+
+        return this.http.get<any[]>(`${this.baseUrl}servicios/activos`, { headers });
     }
 
 
@@ -36,7 +41,8 @@ export class ServicioService {
     actualizarServicioTarifa(id: number, data: any, username: string, password: string): Observable<any> {
         const headers = new HttpHeaders({
             'Content-Type': 'application/json',
-            'Authorization': 'Basic ' + btoa(`${username}:${password}`)
+            'Authorization': 'Basic ' + btoa(`${username}:${password}`),
+            'ngrok-skip-browser-warning': 'true'
         });
         return this.http.put(`${this.baseUrl}servicios/${id}`, data, { headers });
     }
